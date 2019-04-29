@@ -7,21 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E65E48F322777ED700B4475E /* TextInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65E48F222777ED700B4475E /* TextInputViewController.swift */; };
 		E6B0BAFA2277718900DCCD48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B0BAF92277718900DCCD48 /* AppDelegate.swift */; };
-		E6B0BAFC2277718900DCCD48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B0BAFB2277718900DCCD48 /* ViewController.swift */; };
-		E6B0BAFF2277718900DCCD48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6B0BAFD2277718900DCCD48 /* Main.storyboard */; };
 		E6B0BB012277718A00DCCD48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6B0BB002277718A00DCCD48 /* Assets.xcassets */; };
 		E6B0BB042277718A00DCCD48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6B0BB022277718A00DCCD48 /* LaunchScreen.storyboard */; };
+		E6B0BB0D227771B200DCCD48 /* FormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B0BB0C227771B200DCCD48 /* FormField.swift */; };
+		E6B0BB0F2277722500DCCD48 /* TextInputFormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B0BB0E2277722500DCCD48 /* TextInputFormField.swift */; };
+		E6B0BB122277729400DCCD48 /* FormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B0BB112277729400DCCD48 /* FormViewModel.swift */; };
+		E6B0BB14227772B600DCCD48 /* ContactFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B0BB13227772B600DCCD48 /* ContactFormViewModel.swift */; };
+		E6B0BB172277733700DCCD48 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B0BB162277733700DCCD48 /* FormViewController.swift */; };
+		E6B0BB19227774BD00DCCD48 /* FormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6B0BB18227774BD00DCCD48 /* FormViewController.xib */; };
+		E6B0BB1B227776F400DCCD48 /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B0BB1A227776F400DCCD48 /* StackViewController.swift */; };
+		E6B0BB1F2277788900DCCD48 /* TextInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6B0BB1E2277788900DCCD48 /* TextInputViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E65E48F222777ED700B4475E /* TextInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputViewController.swift; sourceTree = "<group>"; };
 		E6B0BAF62277718900DCCD48 /* Form.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Form.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6B0BAF92277718900DCCD48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E6B0BAFB2277718900DCCD48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E6B0BAFE2277718900DCCD48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E6B0BB002277718A00DCCD48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6B0BB032277718A00DCCD48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E6B0BB052277718A00DCCD48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6B0BB0C227771B200DCCD48 /* FormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
+		E6B0BB0E2277722500DCCD48 /* TextInputFormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputFormField.swift; sourceTree = "<group>"; };
+		E6B0BB112277729400DCCD48 /* FormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewModel.swift; sourceTree = "<group>"; };
+		E6B0BB13227772B600DCCD48 /* ContactFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormViewModel.swift; sourceTree = "<group>"; };
+		E6B0BB162277733700DCCD48 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
+		E6B0BB18227774BD00DCCD48 /* FormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormViewController.xib; sourceTree = "<group>"; };
+		E6B0BB1A227776F400DCCD48 /* StackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
+		E6B0BB1E2277788900DCCD48 /* TextInputViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextInputViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +68,45 @@
 		E6B0BAF82277718900DCCD48 /* Form */ = {
 			isa = PBXGroup;
 			children = (
+				E6B0BB152277730100DCCD48 /* View Controllers */,
+				E6B0BB102277728400DCCD48 /* View Models */,
+				E6B0BB0B227771A200DCCD48 /* Fields */,
 				E6B0BAF92277718900DCCD48 /* AppDelegate.swift */,
-				E6B0BAFB2277718900DCCD48 /* ViewController.swift */,
-				E6B0BAFD2277718900DCCD48 /* Main.storyboard */,
 				E6B0BB002277718A00DCCD48 /* Assets.xcassets */,
 				E6B0BB022277718A00DCCD48 /* LaunchScreen.storyboard */,
 				E6B0BB052277718A00DCCD48 /* Info.plist */,
 			);
 			path = Form;
+			sourceTree = "<group>";
+		};
+		E6B0BB0B227771A200DCCD48 /* Fields */ = {
+			isa = PBXGroup;
+			children = (
+				E6B0BB0C227771B200DCCD48 /* FormField.swift */,
+				E6B0BB0E2277722500DCCD48 /* TextInputFormField.swift */,
+			);
+			path = Fields;
+			sourceTree = "<group>";
+		};
+		E6B0BB102277728400DCCD48 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				E6B0BB112277729400DCCD48 /* FormViewModel.swift */,
+				E6B0BB13227772B600DCCD48 /* ContactFormViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		E6B0BB152277730100DCCD48 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E6B0BB162277733700DCCD48 /* FormViewController.swift */,
+				E6B0BB18227774BD00DCCD48 /* FormViewController.xib */,
+				E65E48F222777ED700B4475E /* TextInputViewController.swift */,
+				E6B0BB1E2277788900DCCD48 /* TextInputViewController.xib */,
+				E6B0BB1A227776F400DCCD48 /* StackViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,9 +167,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6B0BB1F2277788900DCCD48 /* TextInputViewController.xib in Resources */,
 				E6B0BB042277718A00DCCD48 /* LaunchScreen.storyboard in Resources */,
+				E6B0BB19227774BD00DCCD48 /* FormViewController.xib in Resources */,
 				E6B0BB012277718A00DCCD48 /* Assets.xcassets in Resources */,
-				E6B0BAFF2277718900DCCD48 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +181,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6B0BAFC2277718900DCCD48 /* ViewController.swift in Sources */,
+				E6B0BB122277729400DCCD48 /* FormViewModel.swift in Sources */,
+				E6B0BB0F2277722500DCCD48 /* TextInputFormField.swift in Sources */,
+				E6B0BB172277733700DCCD48 /* FormViewController.swift in Sources */,
+				E6B0BB1B227776F400DCCD48 /* StackViewController.swift in Sources */,
+				E65E48F322777ED700B4475E /* TextInputViewController.swift in Sources */,
+				E6B0BB0D227771B200DCCD48 /* FormField.swift in Sources */,
+				E6B0BB14227772B600DCCD48 /* ContactFormViewModel.swift in Sources */,
 				E6B0BAFA2277718900DCCD48 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,14 +195,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E6B0BAFD2277718900DCCD48 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E6B0BAFE2277718900DCCD48 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E6B0BB022277718A00DCCD48 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
