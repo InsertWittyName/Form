@@ -5,8 +5,6 @@
 import UIKit
 
 class TextInputFormField: FormField {
-    var nextField: FormField?
-    
     var onChange:((String) -> Void)?
     var onFinish:((String) -> Void)?
     

@@ -17,7 +17,10 @@ class FormViewController: UIViewController {
         }
         
         super.init(nibName: nil, bundle: nil)
+        
+        setupFieldNavigation()
     }
+    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError()
@@ -36,6 +39,24 @@ class FormViewController: UIViewController {
         
         formViewModel.fields.forEach { (field) in
             stackViewController.insert(field.viewController, at: .end)
+        }
+    }
+}
+
+private extension FormViewController {
+    
+    func setupFieldNavigation() {
+        formViewModel.onFieldFinish = { [weak self] field in
+            guard let self = self else { return }
+            
+            if let fieldIndex = self.formViewModel.fields.firstIndex(where: { $0 === field } ) {
+                let nextFieldIndex = fieldIndex + 1
+                
+                if self.formViewModel.fields.indices.contains(nextFieldIndex) {
+                    let nextField = self.formViewModel.fields[nextFieldIndex]
+                    nextField.viewController.becomeFirstResponder()
+                }
+            }
         }
     }
 }

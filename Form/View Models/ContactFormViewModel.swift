@@ -7,13 +7,20 @@ import Foundation
 class ContactFormViewModel: FormViewModel {
     var fields = [FormField]()
     var onUpdate: (() -> Void)?
+    var onFieldFinish: ((FormField) -> Void)?
     
     init() {
         let firstNameTextInput = TextInputFormField(placeholderText: "First name")
         
-        firstNameTextInput.onChange = { [weak self] input in
+        firstNameTextInput.onChange = { [weak self] _ in
             self?.onUpdate?()
         }
+        
+        firstNameTextInput.onFinish = { [weak self] _ in
+            self?.onFieldFinish?(firstNameTextInput)
+        }
+        
+        ///
         
         let surnameTextInput = TextInputFormField(placeholderText: "Surname")
         
@@ -21,10 +28,22 @@ class ContactFormViewModel: FormViewModel {
             self?.onUpdate?()
         }
         
-        firstNameTextInput.onFinish = { [weak surnameTextInput] _ in
-            surnameTextInput?.viewController.becomeFirstResponder()
+        surnameTextInput.onFinish = { [weak self] _ in
+            self?.onFieldFinish?(surnameTextInput)
         }
         
-        fields = [firstNameTextInput, surnameTextInput]
+        ///
+        
+        let otherTextInput = TextInputFormField(placeholderText: "Other field")
+        
+        otherTextInput.onChange = { [weak self] _ in
+            self?.onUpdate?()
+        }
+        
+        otherTextInput.onFinish = { [weak self] _ in
+            self?.onFieldFinish?(otherTextInput)
+        }
+        
+        fields = [firstNameTextInput, otherTextInput, surnameTextInput]
     }
 }

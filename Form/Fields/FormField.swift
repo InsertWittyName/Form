@@ -4,12 +4,10 @@
 
 import UIKit
 
-protocol FormField {
+protocol FormField: class {
     var viewController: UIViewController { get }
     var onChange:((String) -> Void)? { get set }
     var onFinish:((String) -> Void)? { get set }
-    
-    var nextField: FormField? { get set }
 }
 
 //protocol FormFieldViewControllerInterface {
