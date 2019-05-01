@@ -4,22 +4,6 @@
 
 import UIKit
 
-class PickerInputFormField: FormField {
-    var onChange:((String) -> Void)?
-    var onFinish:((String) -> Void)?
-    
-    var placeholderText: String
-    var returnKeyType: UIReturnKeyType = .next
-    
-    lazy var viewController: UIViewController = {
-        return PickerInputViewController(formField: self)
-    }()
-    
-    init(placeholderText: String) {
-        self.placeholderText = placeholderText
-    }
-}
-
 class PickerInputViewController: UIViewController {
     
     @IBOutlet private var textField: UITextField! {
@@ -38,6 +22,13 @@ class PickerInputViewController: UIViewController {
         self.formField = formField
         
         super.init(nibName: nil, bundle: nil)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        textField.placeholder = formField.placeholderText
+        textField.returnKeyType = formField.returnKeyType
     }
     
     required init?(coder aDecoder: NSCoder) {

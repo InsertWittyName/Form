@@ -21,6 +21,7 @@
 		E6B0BB1F2277788900DCCD48 /* TextInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6B0BB1E2277788900DCCD48 /* TextInputViewController.xib */; };
 		EDFECD6D2279A404009E2283 /* PickerInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFECD6B2279A404009E2283 /* PickerInputViewController.swift */; };
 		EDFECD722279A4DD009E2283 /* PickerInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDFECD712279A4DD009E2283 /* PickerInputViewController.xib */; };
+		EDFECD742279A72D009E2283 /* PickerInputFormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFECD732279A72D009E2283 /* PickerInputFormField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		E6B0BB1E2277788900DCCD48 /* TextInputViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextInputViewController.xib; sourceTree = "<group>"; };
 		EDFECD6B2279A404009E2283 /* PickerInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerInputViewController.swift; sourceTree = "<group>"; };
 		EDFECD712279A4DD009E2283 /* PickerInputViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PickerInputViewController.xib; sourceTree = "<group>"; };
+		EDFECD732279A72D009E2283 /* PickerInputFormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerInputFormField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			children = (
 				E6B0BB0C227771B200DCCD48 /* FormField.swift */,
 				E6B0BB0E2277722500DCCD48 /* TextInputFormField.swift */,
+				EDFECD732279A72D009E2283 /* PickerInputFormField.swift */,
 			);
 			path = Fields;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				E6B0BB122277729400DCCD48 /* FormViewModel.swift in Sources */,
 				E6B0BB0F2277722500DCCD48 /* TextInputFormField.swift in Sources */,
 				E6B0BB172277733700DCCD48 /* FormViewController.swift in Sources */,
+				EDFECD742279A72D009E2283 /* PickerInputFormField.swift in Sources */,
 				E6B0BB1B227776F400DCCD48 /* StackViewController.swift in Sources */,
 				E65E48F322777ED700B4475E /* TextInputViewController.swift in Sources */,
 				EDFECD6D2279A404009E2283 /* PickerInputViewController.swift in Sources */,
