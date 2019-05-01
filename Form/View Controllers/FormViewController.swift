@@ -40,6 +40,8 @@ class FormViewController: UIViewController {
         formViewModel.fields.forEach { (field) in
             stackViewController.insert(field.viewController, at: .end)
         }
+        
+        stackViewController.scrollView.startObservingKeyboard()
     }
 }
 

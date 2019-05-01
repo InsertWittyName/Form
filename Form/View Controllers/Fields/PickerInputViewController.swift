@@ -28,7 +28,6 @@ class PickerInputViewController: UIViewController {
         super.viewDidLoad()
         
         textField.placeholder = formField.placeholderText
-        textField.returnKeyType = formField.returnKeyType
     }
     
     required init?(coder aDecoder: NSCoder) {

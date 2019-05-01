@@ -9,14 +9,3 @@ protocol FormField: class {
     var onChange:((String) -> Void)? { get set }
     var onFinish:((String) -> Void)? { get set }
 }
-
-//protocol FormFieldViewControllerInterface {
-//    var viewModel: FormFieldViewModel { get }
-//    init(viewModel: FormFieldViewModel)
-//}
-//
-//typealias FormFieldViewController = UIViewController & FormFieldViewControllerInterface
-//
-//protocol FormFieldViewModel {
-//    var onChange:((String) -> Void)? { get set }
-//}

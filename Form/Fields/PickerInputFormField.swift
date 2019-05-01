@@ -9,7 +9,6 @@ class PickerInputFormField: FormField {
     var onFinish:((String) -> Void)?
     
     var placeholderText: String
-    var returnKeyType: UIReturnKeyType = .next
     
     lazy var viewController: UIViewController = {
         return PickerInputViewController(formField: self)

@@ -11,6 +11,7 @@ class TextInputFormField: FormField {
     var placeholderText: String
     var inputText: String?
     var returnKeyType: UIReturnKeyType = .next
+    var keyboardType: UIKeyboardType = .default
     
     lazy var viewController: UIViewController = {
         return TextInputViewController(formField: self)
@@ -20,14 +21,3 @@ class TextInputFormField: FormField {
         self.placeholderText = placeholderText
     }
 }
-
-//class TextInputFormFieldViewModel: FormFieldViewModel {
-//    var onChange:((String) -> Void)?
-//
-//    let placeholderText: String
-//    var inputText: String?
-//
-//    init(placeholderText: String) {
-//        self.placeholderText = placeholderText
-//    }
-//}

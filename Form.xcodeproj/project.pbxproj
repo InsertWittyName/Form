@@ -22,6 +22,7 @@
 		EDFECD6D2279A404009E2283 /* PickerInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFECD6B2279A404009E2283 /* PickerInputViewController.swift */; };
 		EDFECD722279A4DD009E2283 /* PickerInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDFECD712279A4DD009E2283 /* PickerInputViewController.xib */; };
 		EDFECD742279A72D009E2283 /* PickerInputFormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFECD732279A72D009E2283 /* PickerInputFormField.swift */; };
+		EDFECD772279AD91009E2283 /* UIScrollView+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFECD762279AD91009E2283 /* UIScrollView+Keyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		EDFECD6B2279A404009E2283 /* PickerInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerInputViewController.swift; sourceTree = "<group>"; };
 		EDFECD712279A4DD009E2283 /* PickerInputViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PickerInputViewController.xib; sourceTree = "<group>"; };
 		EDFECD732279A72D009E2283 /* PickerInputFormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerInputFormField.swift; sourceTree = "<group>"; };
+		EDFECD762279AD91009E2283 /* UIScrollView+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Keyboard.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		E6B0BAF82277718900DCCD48 /* Form */ = {
 			isa = PBXGroup;
 			children = (
+				EDFECD752279AD77009E2283 /* Extensions */,
 				E6B0BB152277730100DCCD48 /* View Controllers */,
 				E6B0BB102277728400DCCD48 /* View Models */,
 				E6B0BB0B227771A200DCCD48 /* Fields */,
@@ -124,6 +127,14 @@
 				EDFECD712279A4DD009E2283 /* PickerInputViewController.xib */,
 			);
 			path = Fields;
+			sourceTree = "<group>";
+		};
+		EDFECD752279AD77009E2283 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EDFECD762279AD91009E2283 /* UIScrollView+Keyboard.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDFECD772279AD91009E2283 /* UIScrollView+Keyboard.swift in Sources */,
 				E6B0BB122277729400DCCD48 /* FormViewModel.swift in Sources */,
 				E6B0BB0F2277722500DCCD48 /* TextInputFormField.swift in Sources */,
 				E6B0BB172277733700DCCD48 /* FormViewController.swift in Sources */,
