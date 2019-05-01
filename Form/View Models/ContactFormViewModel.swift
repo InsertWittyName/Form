@@ -7,7 +7,7 @@ import Foundation
 class ContactFormViewModel: FormViewModel {
     var fields = [FormField]()
     var onUpdate: (() -> Void)?
-    var onFieldFinish: ((FormField) -> Void)?
+    var onFieldDidEndEditing: ((FormField) -> Void)?
     
     init() {
         let firstNameTextInput = TextInputFormField(placeholderText: "First name")
@@ -17,7 +17,7 @@ class ContactFormViewModel: FormViewModel {
         }
         
         firstNameTextInput.onFinish = { [weak self] _ in
-            self?.onFieldFinish?(firstNameTextInput)
+            self?.onFieldDidEndEditing?(firstNameTextInput)
         }
         
         ///
@@ -29,7 +29,19 @@ class ContactFormViewModel: FormViewModel {
         }
         
         surnameTextInput.onFinish = { [weak self] _ in
-            self?.onFieldFinish?(surnameTextInput)
+            self?.onFieldDidEndEditing?(surnameTextInput)
+        }
+        
+        ///
+        
+        let pickerInput = PickerInputFormField(placeholderText: "Picker")
+        
+        pickerInput.onChange = { [weak self] _ in
+            self?.onUpdate?()
+        }
+        
+        pickerInput.onFinish = { [weak self] _ in
+            self?.onFieldDidEndEditing?(pickerInput)
         }
         
         ///
@@ -41,9 +53,9 @@ class ContactFormViewModel: FormViewModel {
         }
         
         otherTextInput.onFinish = { [weak self] _ in
-            self?.onFieldFinish?(otherTextInput)
+            self?.onFieldDidEndEditing?(otherTextInput)
         }
         
-        fields = [firstNameTextInput, otherTextInput, surnameTextInput]
+        fields = [firstNameTextInput, surnameTextInput, pickerInput, otherTextInput]
     }
 }

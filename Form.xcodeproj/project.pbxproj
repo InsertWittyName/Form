@@ -19,6 +19,8 @@
 		E6B0BB19227774BD00DCCD48 /* FormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6B0BB18227774BD00DCCD48 /* FormViewController.xib */; };
 		E6B0BB1B227776F400DCCD48 /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B0BB1A227776F400DCCD48 /* StackViewController.swift */; };
 		E6B0BB1F2277788900DCCD48 /* TextInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6B0BB1E2277788900DCCD48 /* TextInputViewController.xib */; };
+		EDFECD6D2279A404009E2283 /* PickerInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFECD6B2279A404009E2283 /* PickerInputViewController.swift */; };
+		EDFECD722279A4DD009E2283 /* PickerInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDFECD712279A4DD009E2283 /* PickerInputViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		E6B0BB18227774BD00DCCD48 /* FormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormViewController.xib; sourceTree = "<group>"; };
 		E6B0BB1A227776F400DCCD48 /* StackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
 		E6B0BB1E2277788900DCCD48 /* TextInputViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextInputViewController.xib; sourceTree = "<group>"; };
+		EDFECD6B2279A404009E2283 /* PickerInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerInputViewController.swift; sourceTree = "<group>"; };
+		EDFECD712279A4DD009E2283 /* PickerInputViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PickerInputViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,13 +104,23 @@
 		E6B0BB152277730100DCCD48 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EDFECD6A2279A3DC009E2283 /* Fields */,
 				E6B0BB162277733700DCCD48 /* FormViewController.swift */,
 				E6B0BB18227774BD00DCCD48 /* FormViewController.xib */,
-				E65E48F222777ED700B4475E /* TextInputViewController.swift */,
-				E6B0BB1E2277788900DCCD48 /* TextInputViewController.xib */,
 				E6B0BB1A227776F400DCCD48 /* StackViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		EDFECD6A2279A3DC009E2283 /* Fields */ = {
+			isa = PBXGroup;
+			children = (
+				E65E48F222777ED700B4475E /* TextInputViewController.swift */,
+				E6B0BB1E2277788900DCCD48 /* TextInputViewController.xib */,
+				EDFECD6B2279A404009E2283 /* PickerInputViewController.swift */,
+				EDFECD712279A4DD009E2283 /* PickerInputViewController.xib */,
+			);
+			path = Fields;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +184,7 @@
 				E6B0BB1F2277788900DCCD48 /* TextInputViewController.xib in Resources */,
 				E6B0BB042277718A00DCCD48 /* LaunchScreen.storyboard in Resources */,
 				E6B0BB19227774BD00DCCD48 /* FormViewController.xib in Resources */,
+				EDFECD722279A4DD009E2283 /* PickerInputViewController.xib in Resources */,
 				E6B0BB012277718A00DCCD48 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -186,6 +201,7 @@
 				E6B0BB172277733700DCCD48 /* FormViewController.swift in Sources */,
 				E6B0BB1B227776F400DCCD48 /* StackViewController.swift in Sources */,
 				E65E48F322777ED700B4475E /* TextInputViewController.swift in Sources */,
+				EDFECD6D2279A404009E2283 /* PickerInputViewController.swift in Sources */,
 				E6B0BB0D227771B200DCCD48 /* FormField.swift in Sources */,
 				E6B0BB14227772B600DCCD48 /* ContactFormViewModel.swift in Sources */,
 				E6B0BAFA2277718900DCCD48 /* AppDelegate.swift in Sources */,

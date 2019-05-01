@@ -46,7 +46,7 @@ class FormViewController: UIViewController {
 private extension FormViewController {
     
     func setupFieldNavigation() {
-        formViewModel.onFieldFinish = { [weak self] field in
+        formViewModel.onFieldDidEndEditing = { [weak self] field in
             guard let self = self else { return }
             
             if let fieldIndex = self.formViewModel.fields.firstIndex(where: { $0 === field } ) {
