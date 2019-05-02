@@ -22,6 +22,7 @@ class TextInputViewController: UIViewController {
         textField.placeholder = formField.placeholderText
         textField.returnKeyType = formField.returnKeyType
         textField.keyboardType = formField.keyboardType
+        textField.textContentType = formField.textContentType
     }
     
     required init?(coder aDecoder: NSCoder) {

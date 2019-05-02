@@ -53,7 +53,7 @@
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="5HX-Dc-h4r"/>
-            <point key="canvasLocation" x="137.59999999999999" y="22.488755622188908"/>
+            <point key="canvasLocation" x="-11" y="-51"/>
         </view>
     </objects>
 </document>

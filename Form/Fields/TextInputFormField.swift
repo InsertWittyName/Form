@@ -12,6 +12,7 @@ class TextInputFormField: FormField {
     var inputText: String?
     var returnKeyType: UIReturnKeyType = .next
     var keyboardType: UIKeyboardType = .default
+    var textContentType: UITextContentType?
     
     lazy var viewController: UIViewController = {
         return TextInputViewController(formField: self)
