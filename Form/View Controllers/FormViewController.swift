@@ -21,7 +21,6 @@ class FormViewController: UIViewController {
         setupFieldNavigation()
     }
     
-    
     required init?(coder aDecoder: NSCoder) {
         fatalError()
     }

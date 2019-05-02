@@ -62,30 +62,6 @@ class ContactFormViewModel: FormViewModel {
         
         ///
         
-        let emptyTextInput3 = TextInputFormField(placeholderText: "Empty")
-        
-        emptyTextInput3.onChange = { [weak self] _ in
-            self?.onUpdate?()
-        }
-        
-        emptyTextInput3.onFinish = { [weak self] _ in
-            self?.onFieldDidEndEditing?(emptyTextInput3)
-        }
-        
-        ///
-        
-        let emptyTextInput4 = TextInputFormField(placeholderText: "Empty")
-        
-        emptyTextInput4.onChange = { [weak self] _ in
-            self?.onUpdate?()
-        }
-        
-        emptyTextInput4.onFinish = { [weak self] _ in
-            self?.onFieldDidEndEditing?(emptyTextInput4)
-        }
-        
-        ///
-        
         let pickerInput = PickerInputFormField(placeholderText: "Picker", options: ["One", "Two", "Three", "Four", "Five"])
         
         pickerInput.onChange = { [weak self] _ in
@@ -109,7 +85,19 @@ class ContactFormViewModel: FormViewModel {
             self?.onFieldDidEndEditing?(otherTextInput)
         }
         
-        fields = [firstNameTextInput, surnameTextInput, emptyTextInput1, emptyTextInput2, emptyTextInput3, emptyTextInput4, pickerInput, otherTextInput]
+        ///
+        
+        let postcodeLookupField = PostcodeLookupFormField()
+        
+        postcodeLookupField.onChange = { [weak self] _ in
+            self?.onUpdate?()
+        }
+        
+        postcodeLookupField.onFinish = { [weak self] _ in
+            self?.onFieldDidEndEditing?(postcodeLookupField)
+        }
+        
+        fields = [firstNameTextInput, surnameTextInput, emptyTextInput1, emptyTextInput2, pickerInput, otherTextInput, postcodeLookupField]
     }
 }
 
