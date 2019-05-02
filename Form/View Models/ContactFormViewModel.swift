@@ -12,11 +12,13 @@ class ContactFormViewModel: FormViewModel {
     init() {
         let firstNameTextInput = TextInputFormField(placeholderText: "First name")
         
-        firstNameTextInput.onChange = { [weak self] _ in
-            self?.onUpdate?()
+        firstNameTextInput.onChange = { [weak self] value in
+            guard let self = self else { return }
+            firstNameTextInput.isValid = self.isValueValid(value)
+            self.onUpdate?()
         }
         
-        firstNameTextInput.onFinish = { [weak self] _ in
+        firstNameTextInput.onFinish = { [weak self] value in
             self?.onFieldDidEndEditing?(firstNameTextInput)
         }
         
@@ -108,5 +110,11 @@ class ContactFormViewModel: FormViewModel {
         }
         
         fields = [firstNameTextInput, surnameTextInput, emptyTextInput1, emptyTextInput2, emptyTextInput3, emptyTextInput4, pickerInput, otherTextInput]
+    }
+}
+
+extension ContactFormViewModel {
+    private func isValueValid(_ value: String) -> Bool {
+        return !value.isEmpty
     }
 }

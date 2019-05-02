@@ -11,7 +11,13 @@ class PickerInputFormField: FormField {
     var placeholderText: String
     var options: [PickerOption]
     
-    lazy var viewController: UIViewController = {
+    var isValid: Bool = false {
+        didSet {
+            viewController.state = isValid ? .valid : .invalid
+        }
+    }
+    
+    lazy var viewController: ValidatableViewController = {
         return PickerInputViewController(formField: self)
     }()
     

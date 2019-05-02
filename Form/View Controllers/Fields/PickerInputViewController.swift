@@ -4,7 +4,20 @@
 
 import UIKit
 
-class PickerInputViewController: UIViewController {
+class PickerInputViewController: ValidatableViewController {
+    
+    var state: ValidationState = .unknown {
+        didSet {
+            switch state {
+            case .notRequired:
+                break
+            case .invalid:
+                textField.textColor = UIColor.red
+            case .valid, .unknown:
+                textField.textColor = UIColor.black
+            }
+        }
+    }
     
     @IBOutlet private var textField: UITextField! {
         didSet {

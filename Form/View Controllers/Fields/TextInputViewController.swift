@@ -4,7 +4,20 @@
 
 import UIKit
 
-class TextInputViewController: UIViewController {
+class TextInputViewController: ValidatableViewController {
+    var state: ValidationState = .unknown {
+        didSet {
+            switch state {
+            case .notRequired:
+                break
+            case .invalid:
+                view.backgroundColor = UIColor.red
+            case .valid, .unknown:
+                view.backgroundColor = UIColor.white
+            }
+        }
+    }
+    
     
     @IBOutlet private var textField: UITextField!
     

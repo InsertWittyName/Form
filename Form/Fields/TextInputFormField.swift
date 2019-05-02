@@ -14,7 +14,13 @@ class TextInputFormField: FormField {
     var keyboardType: UIKeyboardType = .default
     var textContentType: UITextContentType?
     
-    lazy var viewController: UIViewController = {
+    var isValid: Bool = false {
+        didSet {
+            viewController.state = isValid ? .valid : .invalid
+        }
+    }
+    
+    lazy var viewController: ValidatableViewController = {
         return TextInputViewController(formField: self)
     }()
     
