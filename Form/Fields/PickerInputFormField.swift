@@ -9,12 +9,14 @@ class PickerInputFormField: FormField {
     var onFinish:((String) -> Void)?
     
     var placeholderText: String
+    var options: [PickerOption]
     
     lazy var viewController: UIViewController = {
         return PickerInputViewController(formField: self)
     }()
     
-    init(placeholderText: String) {
+    init(placeholderText: String, options: [PickerOption]) {
         self.placeholderText = placeholderText
+        self.options = options
     }
 }

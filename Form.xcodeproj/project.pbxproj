@@ -19,6 +19,8 @@
 		E6B0BB19227774BD00DCCD48 /* FormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6B0BB18227774BD00DCCD48 /* FormViewController.xib */; };
 		E6B0BB1B227776F400DCCD48 /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B0BB1A227776F400DCCD48 /* StackViewController.swift */; };
 		E6B0BB1F2277788900DCCD48 /* TextInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6B0BB1E2277788900DCCD48 /* TextInputViewController.xib */; };
+		ED3D48F5227AD99400A36B1F /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3D48F4227AD99400A36B1F /* PickerView.swift */; };
+		ED3D48F9227ADBBC00A36B1F /* PickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED3D48F8227ADBBC00A36B1F /* PickerView.xib */; };
 		EDFECD6D2279A404009E2283 /* PickerInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFECD6B2279A404009E2283 /* PickerInputViewController.swift */; };
 		EDFECD722279A4DD009E2283 /* PickerInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDFECD712279A4DD009E2283 /* PickerInputViewController.xib */; };
 		EDFECD742279A72D009E2283 /* PickerInputFormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFECD732279A72D009E2283 /* PickerInputFormField.swift */; };
@@ -40,6 +42,8 @@
 		E6B0BB18227774BD00DCCD48 /* FormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormViewController.xib; sourceTree = "<group>"; };
 		E6B0BB1A227776F400DCCD48 /* StackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
 		E6B0BB1E2277788900DCCD48 /* TextInputViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextInputViewController.xib; sourceTree = "<group>"; };
+		ED3D48F4227AD99400A36B1F /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
+		ED3D48F8227ADBBC00A36B1F /* PickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PickerView.xib; sourceTree = "<group>"; };
 		EDFECD6B2279A404009E2283 /* PickerInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerInputViewController.swift; sourceTree = "<group>"; };
 		EDFECD712279A4DD009E2283 /* PickerInputViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PickerInputViewController.xib; sourceTree = "<group>"; };
 		EDFECD732279A72D009E2283 /* PickerInputFormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerInputFormField.swift; sourceTree = "<group>"; };
@@ -76,6 +80,7 @@
 		E6B0BAF82277718900DCCD48 /* Form */ = {
 			isa = PBXGroup;
 			children = (
+				ED3D48F3227AD94200A36B1F /* Views */,
 				EDFECD752279AD77009E2283 /* Extensions */,
 				E6B0BB152277730100DCCD48 /* View Controllers */,
 				E6B0BB102277728400DCCD48 /* View Models */,
@@ -116,6 +121,15 @@
 				E6B0BB1A227776F400DCCD48 /* StackViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		ED3D48F3227AD94200A36B1F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ED3D48F4227AD99400A36B1F /* PickerView.swift */,
+				ED3D48F8227ADBBC00A36B1F /* PickerView.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		EDFECD6A2279A3DC009E2283 /* Fields */ = {
@@ -197,6 +211,7 @@
 			files = (
 				E6B0BB1F2277788900DCCD48 /* TextInputViewController.xib in Resources */,
 				E6B0BB042277718A00DCCD48 /* LaunchScreen.storyboard in Resources */,
+				ED3D48F9227ADBBC00A36B1F /* PickerView.xib in Resources */,
 				E6B0BB19227774BD00DCCD48 /* FormViewController.xib in Resources */,
 				EDFECD722279A4DD009E2283 /* PickerInputViewController.xib in Resources */,
 				E6B0BB012277718A00DCCD48 /* Assets.xcassets in Resources */,
@@ -218,6 +233,7 @@
 				E6B0BB1B227776F400DCCD48 /* StackViewController.swift in Sources */,
 				E65E48F322777ED700B4475E /* TextInputViewController.swift in Sources */,
 				EDFECD6D2279A404009E2283 /* PickerInputViewController.swift in Sources */,
+				ED3D48F5227AD99400A36B1F /* PickerView.swift in Sources */,
 				E6B0BB0D227771B200DCCD48 /* FormField.swift in Sources */,
 				E6B0BB14227772B600DCCD48 /* ContactFormViewModel.swift in Sources */,
 				E6B0BAFA2277718900DCCD48 /* AppDelegate.swift in Sources */,

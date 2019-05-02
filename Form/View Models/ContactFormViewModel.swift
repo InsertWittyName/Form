@@ -44,6 +44,8 @@ class ContactFormViewModel: FormViewModel {
             self?.onFieldDidEndEditing?(emptyTextInput1)
         }
         
+        emptyTextInput1.inputText = "Populated text"
+        
         ///
         
         let emptyTextInput2 = TextInputFormField(placeholderText: "Empty")
@@ -82,7 +84,7 @@ class ContactFormViewModel: FormViewModel {
         
         ///
         
-        let pickerInput = PickerInputFormField(placeholderText: "Picker")
+        let pickerInput = PickerInputFormField(placeholderText: "Picker", options: ["One", "Two", "Three", "Four", "Five"])
         
         pickerInput.onChange = { [weak self] _ in
             self?.onUpdate?()

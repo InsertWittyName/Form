@@ -8,11 +8,18 @@ class PickerInputViewController: UIViewController {
     
     @IBOutlet private var textField: UITextField! {
         didSet {
-            let inputView = UIView()
-            inputView.translatesAutoresizingMaskIntoConstraints = false
-            inputView.backgroundColor = UIColor.gray
-            inputView.heightAnchor.constraint(equalToConstant: 216).isActive = true
-            textField.inputView = inputView
+            let pickerView = Bundle.main.loadNibNamed("PickerView", owner: nil, options: nil)?.first as! PickerView
+            pickerView.translatesAutoresizingMaskIntoConstraints = false
+            
+            pickerView.onSelection = { [weak self] selectedOption in
+                self?.textField.text = selectedOption
+                self?.formField.onChange?(selectedOption)
+                self?.formField.onFinish?(selectedOption)
+            }
+            
+            pickerView.options = formField.options
+            
+            textField.inputView = pickerView
         }
     }
     
