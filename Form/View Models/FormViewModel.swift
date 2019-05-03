@@ -5,7 +5,7 @@
 import Foundation
 
 protocol FormViewModel {
-    var fields: [FormField] { get set }
+    var sections: [FormSection] { get set }
     var onUpdate: (() -> Void)? { get set }
     var onFieldDidEndEditing: ((FormField) -> Void)? { get set }
 }

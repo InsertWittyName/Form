@@ -5,7 +5,7 @@
 import Foundation
 
 class ContactFormViewModel: FormViewModel {
-    var fields = [FormField]()
+    var sections = [FormSection]()
     var onUpdate: (() -> Void)?
     var onFieldDidEndEditing: ((FormField) -> Void)?
     
@@ -97,7 +97,12 @@ class ContactFormViewModel: FormViewModel {
             self?.onFieldDidEndEditing?(postcodeLookupField)
         }
         
-        fields = [firstNameTextInput, surnameTextInput, emptyTextInput1, emptyTextInput2, pickerInput, otherTextInput, postcodeLookupField]
+        let sections = [
+            FormSection(title: "Contact Details", fields: [firstNameTextInput, surnameTextInput, emptyTextInput1, emptyTextInput2, pickerInput, otherTextInput]),
+            FormSection(title: "Address Details", fields: [postcodeLookupField]),
+        ]
+        
+        self.sections = sections
     }
 }
 

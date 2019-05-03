@@ -24,6 +24,7 @@
 		ED3D48FB227B35C500A36B1F /* PostcodeLookupFormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3D48FA227B35C500A36B1F /* PostcodeLookupFormField.swift */; };
 		ED3D48FD227B365900A36B1F /* PostcodeLookupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3D48FC227B365900A36B1F /* PostcodeLookupViewController.swift */; };
 		ED3D48FF227B366800A36B1F /* PostcodeLookupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED3D48FE227B366800A36B1F /* PostcodeLookupViewController.xib */; };
+		ED4E7B83227C42020005E4B5 /* FormSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4E7B82227C42020005E4B5 /* FormSection.swift */; };
 		EDFECD6D2279A404009E2283 /* PickerInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFECD6B2279A404009E2283 /* PickerInputViewController.swift */; };
 		EDFECD722279A4DD009E2283 /* PickerInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDFECD712279A4DD009E2283 /* PickerInputViewController.xib */; };
 		EDFECD742279A72D009E2283 /* PickerInputFormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFECD732279A72D009E2283 /* PickerInputFormField.swift */; };
@@ -50,6 +51,7 @@
 		ED3D48FA227B35C500A36B1F /* PostcodeLookupFormField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostcodeLookupFormField.swift; sourceTree = "<group>"; };
 		ED3D48FC227B365900A36B1F /* PostcodeLookupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostcodeLookupViewController.swift; sourceTree = "<group>"; };
 		ED3D48FE227B366800A36B1F /* PostcodeLookupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostcodeLookupViewController.xib; sourceTree = "<group>"; };
+		ED4E7B82227C42020005E4B5 /* FormSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormSection.swift; sourceTree = "<group>"; };
 		EDFECD6B2279A404009E2283 /* PickerInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerInputViewController.swift; sourceTree = "<group>"; };
 		EDFECD712279A4DD009E2283 /* PickerInputViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PickerInputViewController.xib; sourceTree = "<group>"; };
 		EDFECD732279A72D009E2283 /* PickerInputFormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerInputFormField.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				E6B0BB0E2277722500DCCD48 /* TextInputFormField.swift */,
 				ED3D48FA227B35C500A36B1F /* PostcodeLookupFormField.swift */,
 				EDFECD732279A72D009E2283 /* PickerInputFormField.swift */,
+				ED4E7B82227C42020005E4B5 /* FormSection.swift */,
 			);
 			path = Fields;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				EDFECD6D2279A404009E2283 /* PickerInputViewController.swift in Sources */,
 				ED3D48F5227AD99400A36B1F /* PickerView.swift in Sources */,
 				E6B0BB0D227771B200DCCD48 /* FormField.swift in Sources */,
+				ED4E7B83227C42020005E4B5 /* FormSection.swift in Sources */,
 				E6B0BB14227772B600DCCD48 /* ContactFormViewModel.swift in Sources */,
 				ED3D48FB227B35C500A36B1F /* PostcodeLookupFormField.swift in Sources */,
 				E6B0BAFA2277718900DCCD48 /* AppDelegate.swift in Sources */,

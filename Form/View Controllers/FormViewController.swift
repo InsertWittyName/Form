@@ -36,8 +36,14 @@ class FormViewController: UIViewController {
         stackViewController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         stackViewController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         
-        formViewModel.fields.forEach { (field) in
-            stackViewController.insert(field.viewController, at: .end)
+        formViewModel.sections.forEach { (section) in
+            let sectionTitleLabel = UILabel()
+            sectionTitleLabel.text = section.title
+            stackViewController.insert(sectionTitleLabel, at: .end)
+            
+            section.fields.forEach { (field) in
+                stackViewController.insert(field.viewController, at: .end)
+            }
         }
         
         stackViewController.scrollView.startObservingKeyboard()
@@ -50,12 +56,15 @@ private extension FormViewController {
         formViewModel.onFieldDidEndEditing = { [weak self] field in
             guard let self = self else { return }
             
-            if let fieldIndex = self.formViewModel.fields.firstIndex(where: { $0 === field } ) {
-                let nextFieldIndex = fieldIndex + 1
-                
-                if self.formViewModel.fields.indices.contains(nextFieldIndex) {
-                    let nextField = self.formViewModel.fields[nextFieldIndex]
-                    nextField.viewController.becomeFirstResponder()
+            self.formViewModel.sections.forEach { (section) in
+                if let fieldIndex = section.fields.firstIndex(where: { $0 === field } ) {
+                    let nextFieldIndex = fieldIndex + 1
+                    
+                    if section.fields.indices.contains(nextFieldIndex) {
+                        let nextField = section.fields[nextFieldIndex]
+                        nextField.viewController.becomeFirstResponder()
+                        return
+                    }
                 }
             }
         }
