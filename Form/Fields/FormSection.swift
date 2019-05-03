@@ -2,14 +2,10 @@
 //  Copyright © 2019 DP Ltd. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class FormSection {
-    let fields: [FormField]
-    let title: String
-    
-    init(title: String, fields: [FormField]) {
-        self.title = title
-        self.fields = fields
-    }
+protocol FormSection: class {
+    var fields: [FormField] { get set }
+    var title: String? { get set }
+    var viewController: UIViewController { get }
 }

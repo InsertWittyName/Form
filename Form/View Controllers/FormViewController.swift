@@ -37,9 +37,9 @@ class FormViewController: UIViewController {
         stackViewController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         
         formViewModel.sections.forEach { (section) in
-            let sectionTitleLabel = UILabel()
-            sectionTitleLabel.text = section.title
-            stackViewController.insert(sectionTitleLabel, at: .end)
+            if let _ = section.title {
+                stackViewController.insert(section.viewController, at: .end)
+            }
             
             section.fields.forEach { (field) in
                 stackViewController.insert(field.viewController, at: .end)

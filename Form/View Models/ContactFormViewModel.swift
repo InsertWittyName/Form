@@ -97,12 +97,10 @@ class ContactFormViewModel: FormViewModel {
             self?.onFieldDidEndEditing?(postcodeLookupField)
         }
         
-        let sections = [
-            FormSection(title: "Contact Details", fields: [firstNameTextInput, surnameTextInput, emptyTextInput1, emptyTextInput2, pickerInput, otherTextInput]),
-            FormSection(title: "Address Details", fields: [postcodeLookupField]),
+        self.sections = [
+            AddressBookFormSection(title: "Contact details", fields: [firstNameTextInput, surnameTextInput, emptyTextInput1, emptyTextInput2, pickerInput, otherTextInput]),
+            AddressBookFormSection(title: "Address details", fields: [postcodeLookupField])
         ]
-        
-        self.sections = sections
     }
 }
 
