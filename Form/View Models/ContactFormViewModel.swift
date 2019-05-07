@@ -9,98 +9,100 @@ class ContactFormViewModel: FormViewModel {
     var onUpdate: (() -> Void)?
     var onFieldDidEndEditing: ((FormField) -> Void)?
     
+    private let searchPostcodeViewModel = PostcodeLookupFormField(placeholderText: "EC1R 5EN")
+    private let countryViewModel = PickerInputFormField(placeholderText: "Country", options: ["Hmmm"])
+    private let addressLineViewModel = TextInputFormField(placeholderText: "Address line")
+    private let cityViewModel = TextInputFormField(placeholderText: "City")
+    private let stateViewModel = TextInputFormField(placeholderText: "State")
+    private let postCodeViewModel = TextInputFormField(placeholderText: "Post code")
+    
+    private var contactDetailsSection = AddressBookFormSection(fields: [])
+    private var addressDetailsSection = AddressBookFormSection(fields: [])
+    
     init() {
-        let firstNameTextInput = TextInputFormField(placeholderText: "First name")
+        configureContactDetailsViewModels()
+        configureAddressDetailsViewModels()
         
-        firstNameTextInput.onChange = { [weak self] value in
+        self.sections = [contactDetailsSection, addressDetailsSection]
+    }
+    
+    private func configureContactDetailsViewModels() {
+        let firstNameViewModel = TextInputFormField(placeholderText: "First name")
+        firstNameViewModel.returnKeyType = .next
+        firstNameViewModel.onFinish = { [weak self] value in
+            self?.onFieldDidEndEditing?(firstNameViewModel)
+        }
+        
+        let lastNameViewModel = TextInputFormField(placeholderText: "Last name")
+        lastNameViewModel.returnKeyType = .next
+        lastNameViewModel.onFinish = { [weak self] value in
+            self?.onFieldDidEndEditing?(lastNameViewModel)
+        }
+        
+        let companyNameViewModel = TextInputFormField(placeholderText: "Company name")
+        companyNameViewModel.returnKeyType = .next
+        companyNameViewModel.onFinish = { [weak self] value in
+            self?.onFieldDidEndEditing?(companyNameViewModel)
+        }
+        
+        let birthdayViewModel = PickerInputFormField(placeholderText: "Birthday", options: ["Hmmm"])
+        birthdayViewModel.onFinish = { [weak self] value in
+            self?.onFieldDidEndEditing?(birthdayViewModel)
+        }
+        
+        contactDetailsSection = AddressBookFormSection(title: "Contact Details", fields: [firstNameViewModel, lastNameViewModel, companyNameViewModel, birthdayViewModel])
+    }
+    
+    private func configureAddressDetailsViewModels() {
+        searchPostcodeViewModel.onFinish = { [weak self] value in
             guard let self = self else { return }
-            firstNameTextInput.isValid = self.isValueValid(value)
-            self.onUpdate?()
+            self.onFieldDidEndEditing?(self.searchPostcodeViewModel)
+        }
+        searchPostcodeViewModel.onSelect = { [weak self] value in
+            self?.didSelectAddress(address: value)
         }
         
-        firstNameTextInput.onFinish = { [weak self] value in
-            self?.onFieldDidEndEditing?(firstNameTextInput)
+        countryViewModel.onFinish = { [weak self] value in
+            guard let self = self else { return }
+            self.onFieldDidEndEditing?(self.countryViewModel)
         }
         
-        ///
-        
-        let surnameTextInput = TextInputFormField(placeholderText: "Surname")
-        
-        surnameTextInput.onChange = { [weak self] _ in
-            self?.onUpdate?()
+        addressLineViewModel.returnKeyType = .next
+        addressLineViewModel.onFinish = { [weak self] value in
+            guard let self = self else { return }
+            self.onFieldDidEndEditing?(self.addressLineViewModel)
         }
         
-        surnameTextInput.onFinish = { [weak self] _ in
-            self?.onFieldDidEndEditing?(surnameTextInput)
+        cityViewModel.returnKeyType = .next
+        cityViewModel.onFinish = { [weak self] value in
+            guard let self = self else { return }
+            self.onFieldDidEndEditing?(self.cityViewModel)
         }
         
-        ///
-        
-        let emptyTextInput1 = TextInputFormField(placeholderText: "Empty")
-        
-        emptyTextInput1.onChange = { [weak self] _ in
-            self?.onUpdate?()
+        stateViewModel.returnKeyType = .next
+        stateViewModel.onFinish = { [weak self] value in
+            guard let self = self else { return }
+            self.onFieldDidEndEditing?(self.stateViewModel)
         }
         
-        emptyTextInput1.onFinish = { [weak self] _ in
-            self?.onFieldDidEndEditing?(emptyTextInput1)
+        postCodeViewModel.returnKeyType = .done
+        postCodeViewModel.onFinish = { [weak self] value in
+            guard let self = self else { return }
+            self.onFieldDidEndEditing?(self.postCodeViewModel)
         }
         
-        emptyTextInput1.inputText = "Populated text"
-        
-        ///
-        
-        let emptyTextInput2 = TextInputFormField(placeholderText: "Empty")
-        
-        emptyTextInput2.onChange = { [weak self] _ in
-            self?.onUpdate?()
-        }
-        
-        emptyTextInput2.onFinish = { [weak self] _ in
-            self?.onFieldDidEndEditing?(emptyTextInput2)
-        }
-        
-        ///
-        
-        let pickerInput = PickerInputFormField(placeholderText: "Picker", options: ["One", "Two", "Three", "Four", "Five"])
-        
-        pickerInput.onChange = { [weak self] _ in
-            self?.onUpdate?()
-        }
-        
-        pickerInput.onFinish = { [weak self] _ in
-            self?.onFieldDidEndEditing?(pickerInput)
-        }
-        
-        ///
-        
-        let otherTextInput = TextInputFormField(placeholderText: "Other field")
-        otherTextInput.returnKeyType = .done
-        
-        otherTextInput.onChange = { [weak self] _ in
-            self?.onUpdate?()
-        }
-        
-        otherTextInput.onFinish = { [weak self] _ in
-            self?.onFieldDidEndEditing?(otherTextInput)
-        }
-        
-        ///
-        
-        let postcodeLookupField = PostcodeLookupFormField()
-        
-        postcodeLookupField.onChange = { [weak self] _ in
-            self?.onUpdate?()
-        }
-        
-        postcodeLookupField.onFinish = { [weak self] _ in
-            self?.onFieldDidEndEditing?(postcodeLookupField)
-        }
-        
-        self.sections = [
-            AddressBookFormSection(title: "Contact details", fields: [firstNameTextInput, surnameTextInput, emptyTextInput1, emptyTextInput2, pickerInput, otherTextInput]),
-            AddressBookFormSection(title: "Address details", fields: [postcodeLookupField])
-        ]
+        addressDetailsSection = AddressBookFormSection(title: "Address Details", fields: [searchPostcodeViewModel])
+    }
+}
+
+extension ContactFormViewModel {
+    func didSelectAddress(address: String) {
+        showAllAddressDetailsFields()
+        onUpdate?()
+    }
+    
+    func showAllAddressDetailsFields() {
+        addressDetailsSection.fields = [countryViewModel, addressLineViewModel, cityViewModel, stateViewModel, postCodeViewModel]
     }
 }
 

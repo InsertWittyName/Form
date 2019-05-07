@@ -11,9 +11,10 @@ protocol PostcodeLookupFormFieldDelegate: class {
 class PostcodeLookupFormField: FormField {
     var onChange:((String) -> Void)?
     var onFinish:((String) -> Void)?
+    var onSelect:((String) -> Void)?
     
     var inputPostcode: String?
-    
+    var placeholderText: String
     var addresses: [String]?
     
     var isValid: Bool = false {
@@ -27,6 +28,10 @@ class PostcodeLookupFormField: FormField {
     lazy var viewController: ValidatableViewController = {
         return PostcodeLookupViewController(formField: self)
     }()
+    
+    init(placeholderText: String) {
+        self.placeholderText = placeholderText
+    }
     
     func lookupAddresses(for postcode: String) {
         // Simulate a delay

@@ -11,13 +11,8 @@ class FormViewController: UIViewController {
     init(formViewModel: FormViewModel) {
         self.formViewModel = formViewModel
         self.stackViewController = StackViewController()
-        
-        self.formViewModel.onUpdate = {
-            print("Did update")
-        }
-        
         super.init(nibName: nil, bundle: nil)
-        
+        self.formViewModel.onUpdate = updateFormViewModel
         setupFieldNavigation()
     }
     
@@ -36,17 +31,22 @@ class FormViewController: UIViewController {
         stackViewController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         stackViewController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         
+        addStackViewSubviews()
+    }
+    
+    private func addStackViewSubviews() {
         formViewModel.sections.forEach { (section) in
-            if let _ = section.title {
-                stackViewController.insert(section.viewController, at: .end)
-            }
+            stackViewController.insert(section.viewController, at: .end)
             
             section.fields.forEach { (field) in
                 stackViewController.insert(field.viewController, at: .end)
             }
         }
-        
-        stackViewController.scrollView.startObservingKeyboard()
+    }
+    
+    private func updateFormViewModel() {
+        stackViewController.removeAllArrangedViews()
+        addStackViewSubviews()
     }
 }
 

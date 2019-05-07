@@ -117,6 +117,6 @@ extension PostcodeLookupViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         
         let address = formField.addresses![indexPath.row]
-        formField.onFinish?(address)
+        formField.onSelect?(address)
     }
 }

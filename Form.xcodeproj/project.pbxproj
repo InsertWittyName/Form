@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		7467B2FF227C78FA001F0C07 /* AddressBookFormSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7467B2FE227C78FA001F0C07 /* AddressBookFormSectionController.swift */; };
 		7467B301227C7937001F0C07 /* AddressBookFormSectionController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7467B300227C7937001F0C07 /* AddressBookFormSectionController.xib */; };
-		7467B303227C7A5D001F0C07 /* AddressBookFormSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7467B302227C7A5D001F0C07 /* AddressBookFormSection.swift */; };
+		B43899E72281F0420027E213 /* AddressBookFormSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43899E62281F0420027E213 /* AddressBookFormSection.swift */; };
 		E65E48F322777ED700B4475E /* TextInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65E48F222777ED700B4475E /* TextInputViewController.swift */; };
 		E6B0BAFA2277718900DCCD48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B0BAF92277718900DCCD48 /* AppDelegate.swift */; };
 		E6B0BB012277718A00DCCD48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6B0BB002277718A00DCCD48 /* Assets.xcassets */; };
@@ -37,7 +37,7 @@
 /* Begin PBXFileReference section */
 		7467B2FE227C78FA001F0C07 /* AddressBookFormSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressBookFormSectionController.swift; sourceTree = "<group>"; };
 		7467B300227C7937001F0C07 /* AddressBookFormSectionController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressBookFormSectionController.xib; sourceTree = "<group>"; };
-		7467B302227C7A5D001F0C07 /* AddressBookFormSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressBookFormSection.swift; sourceTree = "<group>"; };
+		B43899E62281F0420027E213 /* AddressBookFormSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressBookFormSection.swift; sourceTree = "<group>"; };
 		E65E48F222777ED700B4475E /* TextInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputViewController.swift; sourceTree = "<group>"; };
 		E6B0BAF62277718900DCCD48 /* Form.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Form.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6B0BAF92277718900DCCD48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 				ED3D48FA227B35C500A36B1F /* PostcodeLookupFormField.swift */,
 				EDFECD732279A72D009E2283 /* PickerInputFormField.swift */,
 				ED4E7B82227C42020005E4B5 /* FormSection.swift */,
-				7467B302227C7A5D001F0C07 /* AddressBookFormSection.swift */,
+				B43899E62281F0420027E213 /* AddressBookFormSection.swift */,
 			);
 			path = Fields;
 			sourceTree = "<group>";
@@ -248,7 +248,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7467B303227C7A5D001F0C07 /* AddressBookFormSection.swift in Sources */,
 				EDFECD772279AD91009E2283 /* UIScrollView+Keyboard.swift in Sources */,
 				ED3D48FD227B365900A36B1F /* PostcodeLookupViewController.swift in Sources */,
 				E6B0BB122277729400DCCD48 /* FormViewModel.swift in Sources */,
@@ -265,6 +264,7 @@
 				ED3D48FB227B35C500A36B1F /* PostcodeLookupFormField.swift in Sources */,
 				E6B0BAFA2277718900DCCD48 /* AppDelegate.swift in Sources */,
 				7467B2FF227C78FA001F0C07 /* AddressBookFormSectionController.swift in Sources */,
+				B43899E72281F0420027E213 /* AddressBookFormSection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
